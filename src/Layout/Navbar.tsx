@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "@/assets/Logo.svg";
 import { Button } from "@/components/ui/CustomButton";
 import { Menu, Search, X } from "lucide-react";
+import CommonWrapper from "@/common/CommonWrapper";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
+      <CommonWrapper>
         <div className="flex items-center justify-between gap-10 h-24">
           <div className="flex items-center space-x-4 lg:space-x-16 w-[40%]">
             {/* Logo */}
@@ -71,7 +72,7 @@ const Navbar: React.FC = () => {
             </button>
           </div>
         </div>
-      </div>
+      </CommonWrapper>
 
       {/* Mobile Menu */}
       {isOpen && (

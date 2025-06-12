@@ -1,6 +1,7 @@
-import { CheckCircle, MapPin, MessageCircle, Star } from "lucide-react";
+import {  MapPin, MessageCircle, Star } from "lucide-react";
 import placeholder from "@/assets/person-placeholder.jpg";
 import { Button } from "../ui/CustomButton";
+import badge from "@/assets/Vector.svg";
 
 export interface SkillMatch {
   id: string;
@@ -29,7 +30,7 @@ const MatchCard = ({ match }: { match: SkillMatch }) => {
             />
             {match.isVerified && (
               <div className="absolute -top-1 -right-1 bg-white rounded-full p-0.5">
-                <CheckCircle className="w-4 h-4 text-blue-500 fill-blue-500" />
+                <img src={badge} alt="badge" />
               </div>
             )}
           </div>
