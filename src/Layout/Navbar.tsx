@@ -14,8 +14,8 @@ const Navbar: React.FC = () => {
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-24">
-          <div className="flex items-center space-x-4 lg:space-x-16">
+        <div className="flex items-center justify-between gap-10 h-24">
+          <div className="flex items-center space-x-4 lg:space-x-16 w-[40%]">
             {/* Logo */}
             <div className="flex-shrink-0 flex items-center space-x-2">
               <img src={logo} alt="logo" />
@@ -24,23 +24,23 @@ const Navbar: React.FC = () => {
               </Link>
             </div>
 
-            <div className="flex items-center relative">
+            <div className="flex-1 hidden lg:flex items-center relative ">
               <Search className="absolute left-3 text-gray-500" />
               <input
                 type="text"
-                className="hidden lg:block w-96 px-4 pl-11 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                className="hidden lg:block w-full px-4 pl-11 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="What skill are you looking for?"
               />
             </div>
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-7">
             {NavLinks.map((link) => (
               <Link
                 to={link.path}
                 key={link.name}
-                className="text-website-color-black hover:text-primary px-3 py-2 rounded-md"
+                className="text-website-color-black hover:text-primary py-2 rounded-md"
               >
                 {link.name}
               </Link>
