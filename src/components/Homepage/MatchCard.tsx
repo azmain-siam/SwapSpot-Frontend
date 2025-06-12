@@ -1,4 +1,5 @@
 import { CheckCircle, MapPin, MessageCircle, Star } from "lucide-react";
+import placeholder from "@/assets/person-placeholder.jpg";
 import { Button } from "../ui/CustomButton";
 
 export interface SkillMatch {
@@ -22,7 +23,7 @@ const MatchCard = ({ match }: { match: SkillMatch }) => {
         <div className="flex items-center gap-3">
           <div className="relative">
             <img
-              src={match.avatar || "/placeholder.svg"}
+              src={placeholder}
               alt={`${match.name}'s profile`}
               className="w-12 h-12 rounded-full object-cover"
             />
